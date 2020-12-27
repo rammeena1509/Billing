@@ -1,0 +1,40 @@
+<?php 
+$array = array();
+
+$array['manager_id'] ='FIT001';
+$array['request_id'] ='51';
+//$array['token'] ='hagyvaajhbchagjbcvgabd 356287478thgejhdhdsbdd5665sdh%%$$%!$37ggshs';
+//$array['employee_id'] ='FIT001';
+//$array['deadline'] ='20-02-2018';
+//$array['enddate'] ='25-02-2018';
+//$array['discription'] ='goining to home';
+//$array['tname'] ='Office App';
+//$array['ename'] ='FIT001';
+//$array['tdocument'] ='Paid Leave';
+//$array['type'] ='Paid Leave';
+//$array['password'] ='ram@123';
+//$array['landmark'] ='Mother Dairy';
+//$array['name'] ='Testing';
+//$array['address'] ='Delta 1';
+//$array['mobile'] ='9540046458';
+$array['comment'] ='done complete';
+$array['status'] =-1;
+//$array['request_id'] ='7';
+//$array['email'] ='manager@frantic.in';
+//$array['password'] ='ram@1995';
+//$array['action'] =1;
+//$array['id'] ='FIP001';
+$data = json_encode($array);
+$ch = curl_init('http://localhost/project/welcome/');  
+//$ch = curl_init('http://khaanpan.com/AppJsonRequest/confirm/');  
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                     
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);                   
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+curl_setopt($ch, CURLOPT_POST, count($data));                                          
+$result = curl_exec($ch);
+var_dump($result);
+//echo "<br/>";
+//echo "<pre>";
+//$result=json_decode($result);
+//print_r($result->data->item[0]);
+?>
